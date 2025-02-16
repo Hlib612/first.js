@@ -39,7 +39,7 @@
 // const canAccessContent = sub === 'vip' || sub === 'pro';
 // console.log(canAccessContent)
 
-1. зробити дві змінні: 
+// 1. зробити дві змінні: 
 // ПЕРШУ - <myFavoriteGameName> зі значенням вашої улюбленої гри(наприклад "minecraft")
 // та ДРУГУ - <myFavoriteGameText> зі значенням рядка = "my favorite game's name" 
 // 2.
@@ -57,5 +57,77 @@
 // приклад рядка, що має вийти
 // The last letter in my favorite game's name "minecraft" is "T" !
 
-const myFavoriteGameName = 'real life';
-const myFavoriteGameText = "my favorite game's name";
+// const myFavoriteGameName = 'real life';
+// const myFavoriteGameText = "my favorite game's name";
+
+// Задача в залежності від підписки виводити вартість
+// "free" 0;
+// "pro"100;
+// "premium" 500;
+//  погане значення "Invalid subscription type"
+let cost2
+const subscription = "pro";
+if (subscription === "free"){
+    cost2 = 0;
+} 
+else if(subscription === "pro"){
+    cost2 = 100;
+}
+else if(subscription === "premium"){
+    cost2 = 500;
+}
+else{
+    console.log('Invalid subscription type')
+}
+console.log(cost2);
+
+//1  Що буде в консолі
+// if ("0") {
+//      console.log( 'Привіт' );
+//     }
+
+  // 2
+    // Використовуючи if..else, напишіть код, що отримує число  
+  // і потім виводить повідомлення на екран:
+  
+  // 1, якщо значення більше нуля,
+  // -1, якщо меньше нуля,
+  // 0, якщо дорівнює нулю.
+  const userNumber = -3;
+  if(userNumber > 0){
+    console.log(1);
+  } else if (userNumber < 0){
+    console.log(-1);
+  } else if (userNumber === 0){
+    console.log(0);
+  } else{
+    console.log('Invalid subscription type');
+  }
+
+  //   Якщо відвідувач вводить “ECMAScript”, виведіть “Правильно!”, 
+//   в іншому випадку — виведіть: “Ви не знаєте? ECMAScript!”
+// const userInput = "jnoik";
+// const userInput = "EcMAScriPt";
+// const userInputToLow = userInput.toLocaleLowerCase();
+// if (userInputToLow === 'ecmascript'){
+//     console.log('Правильно!');
+// } else {
+//     console.log('Ви не знаєте? ECMAScript!');
+// }
+
+// const num1 = 5;
+// const num2 = 10;
+// let biggerNumber;
+// if(num1 > num2){
+//     biggerNumber = num1;
+// } else {
+//     biggerNumber = num2;
+// }
+
+// let type;
+// const age = 20;
+// if (age > 18){
+//     type = 'Adult';
+// } else {
+//     type = 'Child';
+// }
