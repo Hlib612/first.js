@@ -50,10 +50,10 @@
 //    і до елемента зі значенням value включно, якщо такий елемент є в array
 // ["Mango", "Poly", "Ajax"], "Poly" повертає ["Mango", "Poly"]
 // ["Mango", "Poly", "Ajax"], "Jacob" повертає []
-const array = ["Mango", "Poly", "Ajax"];
-const value = "Poly";
-let arr = [];
-const elemIndex = array.indexOf(value);
-console.log(elemIndex);
-arr = array.slice(0, elemIndex + 1)
-console.log(arr);
+// const array = ["Mango", "Poly", "Ajax"];
+// const value = "Poly";
+// let arr = [];
+// const elemIndex = array.indexOf(value);
+// console.log(elemIndex);
+// arr = array.slice(0, elemIndex + 1)
+// console.log(arr);
