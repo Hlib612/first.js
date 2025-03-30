@@ -1,7 +1,4 @@
-// const hallu = function(){
-//     return "hallu javascript"
-// }
-// console.log(hallu());
+// const hallu = () => console.log("hallu javascript");
 
 
 // 2. 
@@ -9,9 +6,7 @@
 //  яка при виклику буде приймати змінну name (наприклад, «Василь») 
 //  і виводити рядок (в нашому випадку «Привіт, Василь»).
 
-// const hello = function(){
-//     return `hello ${name}`
-// }
+// const hello = () => `hello ${name}`
 // let name = prompt();
 // console.log(hello());
 
@@ -27,16 +22,14 @@ pricePerItem - другий параметр, ціна одиниці товар
 
 Виклик calculateTotalPrice(5, 100) повертає 500 */
 
-// const calculateTotalPrice = function(orderedQuantity, pricePerItem){
-// return orderedQuantity * pricePerItem;
-// }
+// const calculateTotalPrice = (orderedQuantity, pricePerItem) => orderedQuantity * pricePerItem;
 // console.log(calculateTotalPrice(6, 10))
 
 // 4. 
 // Напишіть функцію mul(n, m), яка приймає два аргументи
 //  і повертає добуток, суму і різницю цих аргументів. 
 //  Перевірте її роботу.
-// const mul = function(n, m){
+// const mul = (n, m) =>{
 //     const sum = n + m;
 //     const minus = n - m;
 //     const multiplay = n * m;

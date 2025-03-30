@@ -4,7 +4,7 @@
 // // logItems(["Mango", "Kiwi", "Poly", "Ajax"]);
 // // logItems([1, 2, 3, 4, 5]);
 
-// const logItems = function(arr){
+// const logItems = (arr) =>{
 //     for(const item of arr){
 //         console.log(item);
 //     }
