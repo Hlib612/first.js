@@ -52,35 +52,102 @@
 // а потім додавайте до нього властивості.
 
 
-const apartment = {
-    descr: "Spacious apartment in the city center",
-    rating: 4,
-    price: 2153,
-    tags: ["premium", "promoted", "top"],
-    owner:{
-        name: "Henry",
-        phone: "982-126-1588",
-        email: "henry.carter@aptmail.com",
-    }
-}
-console.log(apartment.rating);
-console.log(apartment?.owner?.email);
-console.log(apartment["tags"].length);
-console.log(apartment["tags"][0]);
-console.log(apartment["tags"][apartment["tags"].length - 1]);
+// const apartment = {
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+//     tags: ["premium", "promoted", "top"],
+//     owner:{
+//         name: "Henry",
+//         phone: "982-126-1588",
+//         email: "henry.carter@aptmail.com",
+//     },
+//     changePrice(newPrise){
+//         this.price = newPrise;
+//         return `Prise changed to ${this.price}`;
+//     },
+//     isGood(){
+//         if(this.rating > 8){
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     },
+//     addNewTag(newTag){
+//         this.tags.push(newTag);
+//     }
+// }
+// console.log(apartment.rating);
+// console.log(apartment?.owner?.email);
+// console.log(apartment["tags"].length);
+// console.log(apartment["tags"][0]);
+// console.log(apartment["tags"][apartment["tags"].length - 1]);
 
-// 3
-apartment.price = 5000;
-apartment.rating = 4.7;
-apartment.owner.name = "Henry Sibola";
-apartment.tags.push("trusted");
-console.log(apartment);
+// // 3
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = "Henry Sibola";
+// apartment.tags.push("trusted");
+// console.log(apartment);
 
-// 4
-apartment.area = 60;
-apartment.rooms = 3;
-apartment.location = {
-    ccountry: "Jamaica",
-    city: "Kingston",
+// // 4
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//     ccountry: "Jamaica",
+//     city: "Kingston",
+// };
+// console.log(apartment);
+
+
+
+// // 5
+// apartment.changePrice(7000)
+// console.log(apartment);
+
+// // 5
+// console.log(apartment.changePrice(7000))
+// // 6
+// console.log(apartment.isGood())
+// // 7
+// apartment.addNewTag("best prise")
+// console.log(apartment.tags);
+
+// 8
+
+// Працюємо з колекцією товарів в кошику:
+// Написати методи вказані нижче в коді
+// { name: '🍎', price: 50 }
+// { name: '🍇', price: 70 }
+// { name: '🍋', price: 60 }
+// { name: '🍓', price: 110 }
+const cart = {
+  items: [],
+  getItems() {
+    return this.items;
+  },
+  add(product) {
+    this.items.push(product);
+    return `the product ${product.name} was added`
+  },
+  remove(productName) {},
+  clear() {},
+  countTotalPrice() {},
+  increaseQuantity(productName) {},
+  decreaseQuantity(productName) {},
 };
-console.log(apartment);
+console.log(cart.getItems());
+console.table(cart.getItems());
+
+console.log(cart.add({ name: '🍎', price: 50 }));
+console.log(cart.add({ name: '🍇', price: 70 }));
+console.log(cart.add({ name: '🍋', price: 60 }));
+console.log(cart.add({ name: '🍓', price: 110 }));
+console.table(cart.getItems());
+
+console.log(cart.getItems());
+// console.log(cart.add({ name: '🍓', price: 110 }));
+// console.table(cart.getItems());
+
+// console.log(cart.remove('🍋'));
+// console.table(cart.getItems());
