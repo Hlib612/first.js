@@ -52,31 +52,31 @@
 // а потім додавайте до нього властивості.
 
 
-// const apartment = {
-//     descr: "Spacious apartment in the city center",
-//     rating: 4,
-//     price: 2153,
-//     tags: ["premium", "promoted", "top"],
-//     owner:{
-//         name: "Henry",
-//         phone: "982-126-1588",
-//         email: "henry.carter@aptmail.com",
-//     },
-//     changePrice(newPrise){
-//         this.price = newPrise;
-//         return `Prise changed to ${this.price}`;
-//     },
-//     isGood(){
-//         if(this.rating > 8){
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     },
-//     addNewTag(newTag){
-//         this.tags.push(newTag);
-//     }
-// }
+const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+    owner:{
+        name: "Henry",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com",
+    },
+    changePrice(newPrise){
+        this.price = newPrise;
+        return `Prise changed to ${this.price}`;
+    },
+    isGood(){
+        if(this.rating > 8){
+            return true;
+        } else {
+            return false;
+        }
+    },
+    addNewTag(newTag){
+        this.tags.push(newTag);
+    }
+}
 // console.log(apartment.rating);
 // console.log(apartment?.owner?.email);
 // console.log(apartment["tags"].length);
@@ -121,33 +121,100 @@
 // { name: '🍇', price: 70 }
 // { name: '🍋', price: 60 }
 // { name: '🍓', price: 110 }
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
-  },
-  add(product) {
-    this.items.push(product);
-    return `the product ${product.name} was added`
-  },
-  remove(productName) {},
-  clear() {},
-  countTotalPrice() {},
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
-};
-console.log(cart.getItems());
-console.table(cart.getItems());
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     this.items.push(product);
+//     return `the product ${product.name} was added`
+//   },
+//   remove(productName) {},
+//   clear() {},
+//   countTotalPrice() {},
+//   increaseQuantity(productName) {},
+//   decreaseQuantity(productName) {},
+// };
+// console.log(cart.getItems());
+// console.table(cart.getItems());
 
-console.log(cart.add({ name: '🍎', price: 50 }));
-console.log(cart.add({ name: '🍇', price: 70 }));
-console.log(cart.add({ name: '🍋', price: 60 }));
-console.log(cart.add({ name: '🍓', price: 110 }));
-console.table(cart.getItems());
+// console.log(cart.add({ name: '🍎', price: 50 }));
+// console.log(cart.add({ name: '🍇', price: 70 }));
+// console.log(cart.add({ name: '🍋', price: 60 }));
+// console.log(cart.add({ name: '🍓', price: 110 }));
+// console.table(cart.getItems());
 
-console.log(cart.getItems());
+// console.log(cart.getItems());
 // console.log(cart.add({ name: '🍓', price: 110 }));
 // console.table(cart.getItems());
 
 // console.log(cart.remove('🍋'));
 // console.table(cart.getItems());
+
+// const valuess = [];
+
+// const keys = Object.keys(apartment);
+// console.log(keys);
+// for (const key of keys){
+//   valuess.push(apartment[key]);
+// }
+// console.log(valuess);
+
+// const valuess = Object.values(apartment);
+// console.log(valuess);
+
+// const enteries = Object.enteries(apartment);
+// console.log(enteries);
+
+
+// 1
+// Масив colors містить колекцію кольорів.
+// Кожен колір представлений об'єктом і має властивості
+// hex і rgb з відповідними для цього формату і кольору значеннями.
+
+// Перебери масив об'єктів colors, використовуючи цикл for...of.
+// Додай у масив hexColors значення властивостей hex,
+// а в масив rgbColors - значення властивостей rgb з усіх об'єктів масиву colors.
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for(const color of colors){
+//   rgbColors.push(color.rgb);
+//   hexColors.push(color.hex);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+// 2
+// Доповни код функції так, щоб вона шукала об'єкт продукту
+// з певним ім'ям (властивість name) в масиві products і
+// повертала його ціну (властивість price).
+// Якщо продукт з такою назвою не знайдений повертати null.
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+const productName = "Radar";
+
+const getProductPrice = (productName) => {
+  for(const product of products){
+    console.log(product.name)
+    if(product.name === productName){
+      return product.price;
+    }
+  }
+  return null;
+}
+// console.log(getProductPrice("Radar"));
