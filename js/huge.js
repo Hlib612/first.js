@@ -218,3 +218,62 @@ const getProductPrice = (productName) => {
   return null;
 }
 // console.log(getProductPrice("Radar"));
+
+
+
+// 0
+// Скопіювати масив викор розпорошення 
+const numberss = [1, 2, 3, 54, 12];
+// Скопіювати обєкт викор розпорошення 
+const apartment1 = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+
+const apartment1Copy = {
+  ...apartment1
+}
+console.log(apartment1Copy)
+
+
+// Функція getExtremeScores(scores) 
+// приймає масив оцінок (чисел) у параметрі scores.
+// вона повертала об'єкт із двома властивостями:
+// Властивість best має містити найбільше число з масиву scores
+// Властивість worst має містити найменше число з масиву scores.
+// Використовуй оператор (...spread) і методи Math.max() і Math.min().
+
+const getExtremeScores = (scores) =>{
+  const maxScore = Math.max(...scores);
+  const msnScore = Math.min(...scores);
+
+  const score = {
+    best: maxScore,
+    worst: msnScore,
+  }
+  return score
+}
+
+
+
+console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26])) //{ best: 93, worst: 17 }
+console.log(getExtremeScores([19, 7, 4, 17, 81, 24])) //{ best: 81, worst: 4 }
+
+
+// Використовуючи синтаксис залишкових параметрів, 
+// створи функцію add() так, 
+// щоб вона приймала будь-яку кількість аргументів у параметр args
+//  і повертала їхню суму
+
+const add = (...args) =>{
+  let total = 0;
+  for(const num of args){
+     total += num;
+  }
+  return total;
+}
+
+
+console.log(add(12, 4, 11, 48)) // 75
+console.log(add(32, 6, 13, 19, 8)) // 78
