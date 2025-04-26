@@ -199,42 +199,42 @@ const apartment = {
 // з певним ім'ям (властивість name) в масиві products і
 // повертала його ціну (властивість price).
 // Якщо продукт з такою назвою не знайдений повертати null.
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-const productName = "Radar";
+// const productName = "Radar";
 
-const getProductPrice = (productName) => {
-  for(const product of products){
-    console.log(product.name)
-    if(product.name === productName){
-      return product.price;
-    }
-  }
-  return null;
-}
-// console.log(getProductPrice("Radar"));
+// const getProductPrice = (productName) => {
+//   for(const product of products){
+//     console.log(product.name)
+//     if(product.name === productName){
+//       return product.price;
+//     }
+//   }
+//   return null;
+// }
+// // console.log(getProductPrice("Radar"));
 
 
 
-// 0
-// Скопіювати масив викор розпорошення 
-const numberss = [1, 2, 3, 54, 12];
-// Скопіювати обєкт викор розпорошення 
-const apartment1 = {
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-};
+// // 0
+// // Скопіювати масив викор розпорошення 
+// const numberss = [1, 2, 3, 54, 12];
+// // Скопіювати обєкт викор розпорошення 
+// const apartment1 = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
 
-const apartment1Copy = {
-  ...apartment1
-}
-console.log(apartment1Copy)
+// const apartment1Copy = {
+//   ...apartment1
+// }
+// console.log(apartment1Copy)
 
 
 // Функція getExtremeScores(scores) 
@@ -244,21 +244,21 @@ console.log(apartment1Copy)
 // Властивість worst має містити найменше число з масиву scores.
 // Використовуй оператор (...spread) і методи Math.max() і Math.min().
 
-const getExtremeScores = (scores) =>{
-  const maxScore = Math.max(...scores);
-  const msnScore = Math.min(...scores);
+// const getExtremeScores = (scores) =>{
+//   const maxScore = Math.max(...scores);
+//   const msnScore = Math.min(...scores);
 
-  const score = {
-    best: maxScore,
-    worst: msnScore,
-  }
-  return score
-}
+//   const score = {
+//     best: maxScore,
+//     worst: msnScore,
+//   }
+//   return score
+// }
 
 
 
-console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26])) //{ best: 93, worst: 17 }
-console.log(getExtremeScores([19, 7, 4, 17, 81, 24])) //{ best: 81, worst: 4 }
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26])) //{ best: 93, worst: 17 }
+// console.log(getExtremeScores([19, 7, 4, 17, 81, 24])) //{ best: 81, worst: 4 }
 
 
 // Використовуючи синтаксис залишкових параметрів, 
@@ -266,14 +266,108 @@ console.log(getExtremeScores([19, 7, 4, 17, 81, 24])) //{ best: 81, worst: 4 }
 // щоб вона приймала будь-яку кількість аргументів у параметр args
 //  і повертала їхню суму
 
-const add = (...args) =>{
-  let total = 0;
-  for(const num of args){
-     total += num;
+// const add = (...args) =>{
+//   let total = 0;
+//   for(const num of args){
+//      total += num;
+//   }
+//   return total;
+// }
+
+
+// console.log(add(12, 4, 11, 48)) // 75
+// console.log(add(32, 6, 13, 19, 8)) // 78
+
+
+
+// // Об’єкт user
+// const user = {
+//   name: 'John',
+//   age: 30,
+//   email: 'john@example.com'
+// }
+
+// const{name = "User", age = 31, email: userEmail = "none@gmail.com",} = user;
+// console.log(name, age, userEmail)
+
+
+
+// // Об’єкт movie
+// const movie = {
+//   title: 'The Shawshank Redemption',
+//   director: {
+//     name: 'Frank Darabont',
+//     nationality: 'American'
+//   },
+//   actors: ['Tim Robbins', 'Morgan Freeman'],
+//   release_year: 1994,
+//   ratings: {
+//     imdb: 9.3,
+//     rotten_tomatoes: 90
+//   }
+// }
+
+// const {title, director: {name: directorName, nationality: directorNationality}, actors, ratings: {imdb, rotten_tomatoes}} = movie;
+// console.log(title, directorName, directorNationality, actors, imdb, rotten_tomatoes)
+
+
+// // Об’єкт books
+// const books = {
+//   count: 3,
+//   list: [
+//     {
+//       title: 'The Great Gatsby',
+//       author: 'F. Scott Fitzgerald',
+//       year: 1925
+//     },
+//     {
+//       title: 'To Kill a Mockingbird',
+//       author: 'Harper Lee',
+//       year: 1960
+//     },
+//     {
+//       title: '1984',
+//       author: 'George Orwell',
+//       year: 1949
+//     }
+//   ]
+// }
+
+
+// const{count, list} = books;
+// console.log(count, list);
+
+
+
+// Дано масив об’єктів
+const friends = [
+  { name: "Mango", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: false },
+  { name: "Ajax", online: false },
+];
+
+// Написати функція яка буде отримувати масив
+// та ім’я друга якого потрібно знайти
+
+const findFriendByName =(arr, nameToFind) =>{
+for( const {name} of friends){
+  if(name === nameToFind){
+    return "Found a friend"
   }
-  return total;
+}
+return "Doesnt find friend"
 }
 
+console.log(findFriendByName(friends, 'Poly'));
+console.log(findFriendByName(friends, 'Chelsy'));
 
-console.log(add(12, 4, 11, 48)) // 75
-console.log(add(32, 6, 13, 19, 8)) // 78
+// Написати функцію яка буде повертати масив всіх імен друзів
+// console.log(getAllNames(friends));
+
+// Написати функ,яка буд
+// Написати функ,яка буде повертати масив імен друзів які онлайн
+// console.log(getOnlineFriends(friends));
+
+// Написати функцію яка буде повертати масив імен друзів які офлайн
+// console.log(getOfflineFriends(friends));
