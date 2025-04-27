@@ -121,21 +121,29 @@ const apartment = {
 // { name: '🍇', price: 70 }
 // { name: '🍋', price: 60 }
 // { name: '🍓', price: 110 }
-// const cart = {
-//   items: [],
-//   getItems() {
-//     return this.items;
-//   },
-//   add(product) {
-//     this.items.push(product);
-//     return `the product ${product.name} was added`
-//   },
-//   remove(productName) {},
-//   clear() {},
-//   countTotalPrice() {},
-//   increaseQuantity(productName) {},
-//   decreaseQuantity(productName) {},
-// };
+const cart = {
+  items: [],
+  getItems() {
+    return this.items;
+  },
+  add(product) {
+    this.items.push(product);
+    return `the product ${product.name} was added`
+  },
+  remove(productName) {
+    for(let i = 0; i< this.items.length; i += 1){
+        if(this.item[i].name === productName){
+            console.log(`Found ${productName}`)
+            this.item.splice(1, 1)
+        }
+    }
+    return "This prodfdkfkmfk"
+  },
+  clear() {},
+  countTotalPrice() {},
+  increaseQuantity(productName) {},
+  decreaseQuantity(productName) {},
+};
 // console.log(cart.getItems());
 // console.table(cart.getItems());
 
@@ -151,6 +159,8 @@ const apartment = {
 
 // console.log(cart.remove('🍋'));
 // console.table(cart.getItems());
+
+// const {items} = cart;
 
 // const valuess = [];
 
@@ -293,49 +303,52 @@ const apartment = {
 
 
 // // Об’єкт movie
-// const movie = {
-//   title: 'The Shawshank Redemption',
-//   director: {
-//     name: 'Frank Darabont',
-//     nationality: 'American'
-//   },
-//   actors: ['Tim Robbins', 'Morgan Freeman'],
-//   release_year: 1994,
-//   ratings: {
-//     imdb: 9.3,
-//     rotten_tomatoes: 90
-//   }
-// }
+const movie = {
+  title: 'The Shawshank Redemption',
+  director: {
+    name: 'Frank Darabont',
+    nationality: 'American'
+  },
+  actors: ['Tim Robbins', 'Morgan Freeman'],
+  release_year: 1994,
+  ratings: {
+    imdb: 9.3,
+    rotten_tomatoes: 90
+  }
+}
 
-// const {title, director: {name: directorName, nationality: directorNationality}, actors, ratings: {imdb, rotten_tomatoes}} = movie;
-// console.log(title, directorName, directorNationality, actors, imdb, rotten_tomatoes)
+
+
+
+// const {title, director: {name: directorName, nationality: directorNationality}, actors:[actorTim, actorMorgan], ratings: {imdb, rotten_tomatoes}} = movie;
+// console.log(title, directorName, directorNationality, actorTim, actorMorgan , imdb, rotten_tomatoes)
 
 
 // // Об’єкт books
-// const books = {
-//   count: 3,
-//   list: [
-//     {
-//       title: 'The Great Gatsby',
-//       author: 'F. Scott Fitzgerald',
-//       year: 1925
-//     },
-//     {
-//       title: 'To Kill a Mockingbird',
-//       author: 'Harper Lee',
-//       year: 1960
-//     },
-//     {
-//       title: '1984',
-//       author: 'George Orwell',
-//       year: 1949
-//     }
-//   ]
-// }
+const books = {
+  count: 3,
+  list: [
+    {
+      title: 'The Great Gatsby',
+      author: 'F. Scott Fitzgerald',
+      year: 1925
+    },
+    {
+      title: 'To Kill a Mockingbird',
+      author: 'Harper Lee',
+      year: 1960
+    },
+    {
+      title: '1984',
+      author: 'George Orwell',
+      year: 1949
+    }
+  ]
+}
 
 
-// const{count, list} = books;
-// console.log(count, list);
+// const{count, list: [{title, author, year}, killBook, _1984]} = books;
+// console.log(count, title, author, year, killBook, _1984);
 
 
 
@@ -364,10 +377,42 @@ console.log(findFriendByName(friends, 'Chelsy'));
 
 // Написати функцію яка буде повертати масив всіх імен друзів
 // console.log(getAllNames(friends));
-
+function getAllNames (friends) {
+    const names = [];
+    for (const friend of friends){
+        names.push(friend.name)
+    }
+    return names;
+}
 // Написати функ,яка буд
 // Написати функ,яка буде повертати масив імен друзів які онлайн
 // console.log(getOnlineFriends(friends));
 
 // Написати функцію яка буде повертати масив імен друзів які офлайн
 // console.log(getOfflineFriends(friends));
+
+// function getOnlineFriends (friends) {
+//     const onlineFriendsName = [];
+//     for (const friend of friends) {
+//         if (friend.online) {
+//             onlineFriendsName.push(friend.name);
+//         }
+//     }
+//     return onlineFriendsName
+// }
+// console.log(getOnlineFriends(friends));
+
+function getOfflineFriends (friends) {
+    const offlineFriendsName = [];
+    for (const {online, name} of friends) {
+        if (!online) {
+            offlineFriendsName.push (name);
+        }
+    }
+    return offlineFriendsName;
+}
+
+// console.log(getOfflineFriends(friends));
+
+
+
