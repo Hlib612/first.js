@@ -372,18 +372,18 @@ for( const {name} of friends){
 return "Doesnt find friend"
 }
 
-console.log(findFriendByName(friends, 'Poly'));
-console.log(findFriendByName(friends, 'Chelsy'));
+// console.log(findFriendByName(friends, 'Poly'));
+// console.log(findFriendByName(friends, 'Chelsy'));
 
 // Написати функцію яка буде повертати масив всіх імен друзів
 // console.log(getAllNames(friends));
-function getAllNames (friends) {
-    const names = [];
-    for (const friend of friends){
-        names.push(friend.name)
-    }
-    return names;
-}
+// function getAllNames (friends) {
+//     const names = [];
+//     for (const friend of friends){
+//         names.push(friend.name)
+//     }
+//     return names;
+// }
 // Написати функ,яка буд
 // Написати функ,яка буде повертати масив імен друзів які онлайн
 // console.log(getOnlineFriends(friends));
@@ -402,17 +402,84 @@ function getAllNames (friends) {
 // }
 // console.log(getOnlineFriends(friends));
 
-function getOfflineFriends (friends) {
-    const offlineFriendsName = [];
-    for (const {online, name} of friends) {
-        if (!online) {
-            offlineFriendsName.push (name);
-        }
-    }
-    return offlineFriendsName;
-}
+// function getOfflineFriends (friends) {
+//     const offlineFriendsName = [];
+//     for (const {online, name} of friends) {
+//         if (!online) {
+//             offlineFriendsName.push (name);
+//         }
+//     }
+//     return offlineFriendsName;
+// }
 
 // console.log(getOfflineFriends(friends));
 
 
 
+
+
+
+
+
+
+
+const players = [
+  { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+  { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+  { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+  { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+  { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+];
+
+// Використовуючи 👆 масив об’єктів виконай наступні завдання:
+//map()
+// Отримати масив імен всіх гравців
+
+const playerName = players.map(({name}) => name);
+// console.log(playerName)
+// Збільшити кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
+
+
+
+//* Збільшити кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
+
+const playerPoints = players.map((player) => {
+  return { ...player, points: player.points * 1.1 };
+});
+// console.log(playerPoints);
+
+const playerPoint = players.map(({points}) => points + points/10);
+// console.log(playerPoint)
+
+
+// Збільшити кількість годин гравця по id. Переписати на тернарник
+
+const ubdatedPlayerHours = players.map((player) => {
+  if(player.id === 'player-2'){
+    // player.timePlayed = player.timePlayed + 100;
+    return {...player, timePlayed: player.timePlayed + 100,};
+  }
+  return player;
+})
+console.log(ubdatedPlayerHours);
+console.log(players);
+
+//filter()
+// Отримати масив всіх гравців онлайн
+
+const playersOnline = players.filter((player) => player.online);
+console.log(playersOnline)
+// Отримати масив всіх гравців офлайн
+
+const playersOfline = players.filter((player) => !player.online);
+console.log(playersOfline)
+// Отримати масив всіх хардкорних гравців з часом більше 250
+//Find()
+const bestPlayers = players.filter((player) => player.timePlayed > 250);
+console.log(bestPlayers)
+
+// Знайти гравця по id
+// Знайти гравця по імені
+//every()
+// Перевірити чи всі гравці мають час більше 200
+// Перевірити чи всі гравці онлайн
