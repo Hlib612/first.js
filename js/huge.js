@@ -519,3 +519,6 @@ const sortedPlayers = players.sort((previousPlayer, nextPlayer) => previousPlaye
 // console.log(sortedPlayers)
 
 const sortByPoints = players.sort((previousPlayer, nextPlayer) => previousPlayer.points - nextPlayer.points).map((player) => player.name)
+
+
+const sortByNames = [...players].sort((previousPlayer, nextPlayer) => previousPlayer.name.localeCompare(nextPlayer.name)).map((player) => player.name)
