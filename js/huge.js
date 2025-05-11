@@ -513,7 +513,9 @@ const inReversedOrder = students1.sort((a, b) => b.localeCompare(a));
 
 
 const totalTimePlayed = players.reduce((acc, player) => (player.timePlayed + acc), 0);
-console.log(totalTimePlayed)
+// console.log(totalTimePlayed)
 
 const sortedPlayers = players.sort((previousPlayer, nextPlayer) => previousPlayer.points - nextPlayer.points)
-console.log(sortedPlayers)
+// console.log(sortedPlayers)
+
+const sortByPoints = players.sort((previousPlayer, nextPlayer) => previousPlayer.points - nextPlayer.points).map((player) => player.name)
