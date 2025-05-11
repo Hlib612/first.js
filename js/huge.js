@@ -461,25 +461,59 @@ const ubdatedPlayerHours = players.map((player) => {
   }
   return player;
 })
-console.log(ubdatedPlayerHours);
-console.log(players);
+// console.log(ubdatedPlayerHours);
+// console.log(players);
 
 //filter()
 // Отримати масив всіх гравців онлайн
 
 const playersOnline = players.filter((player) => player.online);
-console.log(playersOnline)
+// console.log(playersOnline)
 // Отримати масив всіх гравців офлайн
 
 const playersOfline = players.filter((player) => !player.online);
-console.log(playersOfline)
+// console.log(playersOfline)
 // Отримати масив всіх хардкорних гравців з часом більше 250
 //Find()
 const bestPlayers = players.filter((player) => player.timePlayed > 250);
-console.log(bestPlayers)
-
+// console.log(bestPlayers)
 // Знайти гравця по id
+
+
+const playerById = players.find((player) => (player.id === "player-2"));
+// console.log(playerById);
 // Знайти гравця по імені
+const playerByName = players.find((player) => (player.name === 'Kiwi'));
+// console.log(playerByName);
 //every()
 // Перевірити чи всі гравці мають час більше 200
+const everyTime = players.every((player) => (player.timePlayed >= 200));
+// console.log(everyTime);
 // Перевірити чи всі гравці онлайн
+const playersAreActive = players.every((player) => (player.online === true));
+// console.log(playersAreActive);
+
+
+
+const scores = [61, 19, 74, 35, 92, 56];
+const ascendingScores = scores.sort((a, b) => a - b);
+// console.log(ascendingScores);
+const scores1 = [61, 19, 74, 35, 92, 56];
+const descendingScores = scores1.sort((a, b) => b - a);
+// console.log(descendingScores);
+
+
+const students1 = ["Jacob", "Artemis", "Solomon", "Adrian", "Kai", "Ganymede"];
+
+const inAlphabetOrder = students1.sort((a, b) => a.localeCompare(b));
+// console.log(inAlphabetOrder); 
+
+const inReversedOrder = students1.sort((a, b) => b.localeCompare(a));
+// console.log(inReversedOrder);
+
+
+const totalTimePlayed = players.reduce((acc, player) => (player.timePlayed + acc), 0);
+console.log(totalTimePlayed)
+
+const sortedPlayers = players.sort((previousPlayer, nextPlayer) => previousPlayer.points - nextPlayer.points)
+console.log(sortedPlayers)
