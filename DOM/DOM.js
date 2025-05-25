@@ -11,3 +11,4 @@ linkEl.style.fontStyle = "italic";
 console.log(linkEl);
 //  - Додайте клас "site-nav__link" до першого посилання
 //  - Збільшіть розмір шрифта посилання з атрибутом href = "https://"
+linkEl.classList.add("crazy")
