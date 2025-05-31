@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
     <style>
-        .crazy{
-            display: block;
-            text-align: center;
-            color:chartreuse;
-            background-color: darkgreen;
-            font-size: 30px;
-            text-shadow: 1px;
-            width: 300px;
-            height: 100px;
+      .crazy {
+        display: block;
+        text-align: center;
+        color: chartreuse;
+        background-color: darkgreen;
+        font-size: 30px;
+        text-shadow: 1px;
+        width: 300px;
+        height: 100px;
+      }
+        .color-picker__option {
+          display: inline-block;
+          width: 64px;
+          height: 64px;
+          margin: 4px;
+          border: none;
+          outline: none;
+          cursor: pointer;
         }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <ul class="site-nav">
       <li class="site-nav__item">
         <a href="">Про нас</a>
@@ -30,5 +39,6 @@
       </li>
     </ul>
     <script src="./DOM.js" type="module"></script>
-</body>
+    <div class="color-picker js-color-picker"></div>
+  </body>
 </html>
