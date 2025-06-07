@@ -25,17 +25,17 @@ const colorPickerOptions = [
   ];
 
 
-//   const containerEl = document.querySelector(".js-color-picker");
-// console.log(containerEl);
-// const items = colorPickerOptions.map(option => {
-//     console.log(option);
-//     const button = document.createElement("button");
-//     button.textContent = option.label;
-//     button.classList.add('color-picker__option');
-//     button.style.backgroundColor = option.color;
-//     console.log(button);
-//     return button;
-// });
+  const containerEl = document.querySelector(".js-color-picker");
+console.log(containerEl);
+const items = colorPickerOptions.map(option => {
+    console.log(option);
+    const button = document.createElement("button");
+    button.textContent = option.label;
+    button.classList.add('color-picker__option');
+    button.style.backgroundColor = option.color;
+    console.log(button);
+    return button;
+});
 // console.log(items);
 // containerEl.append(...items);
 
@@ -59,3 +59,5 @@ const markup = colorPickerOptions.map(option => {
 containerEl.innerHTML = markup;
 
 console.log(markup);
+
+
