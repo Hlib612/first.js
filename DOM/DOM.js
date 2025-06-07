@@ -82,4 +82,4 @@ const cardContent = ` <h2 class="product__name">Назва</h2>
         article.innerHTML = cardContent;
 
 // 3 спосіб elem.insertAdjacentHTML(position, string);
-article.insertAdjacentHTML("afterbegin" , cardContent)
+article.insertAdjacentHTML("afterbegin" , cardContent);
