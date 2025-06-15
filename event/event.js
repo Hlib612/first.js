@@ -42,3 +42,17 @@ const formHandler = (event) => {
 };
 
 formElement.addEventListener("submit", formHandler);
+
+
+const tryMeInput = document.querySelector(".tryMe");
+const onFocusInput = (event) => {
+    tryMeInput.style.border = "4px solid blue";
+    tryMeInput.style.backgroundColor = "yellow";
+}
+tryMeInput.addEventListener("focus" , onFocusInput);
+
+const onBlurInput = (event) => {
+    tryMeInput.style.border = "2px solid green";
+    tryMeInput.style.backgroundColor = "aquamarine";
+}
+tryMeInput.addEventListener("blur" , onBlurInput);
